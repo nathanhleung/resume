@@ -1,0 +1,88 @@
+
+// @todo
+.underline
+  display inline-block
+  background green
+  
+  $text-shadow-base = "0px 0px 1.2em green"
+  $text-shadow-string = ""
+  
+  for num in (1..100)
+    $text-shadow-string += $text-shadow-base + ", "
+  $text-shadow-string += $text-shadow-base
+    
+  text-shadow unquote($text-shadow-string)
+  
+  &::before
+    content ''
+    display block
+    position relative
+    top 1.2em
+    height 1px
+    width 100%
+    background black
+
+#resume
+  padding-top 50px
+  padding-bottom 50px
+  
+  .container
+    padding 0
+  
+  &, h1, h2, h3, h4
+    font-family Open Sans
+    font-weight 300
+  
+  #infobox
+    text-align center
+    
+    @media (min-width: 768px)
+      text-align right
+      
+    img
+      float none
+      
+      @media (min-width: 768px)
+        float right
+      
+    
+  img
+    // filter contrast(1.2) brightness(1.3) grayscale(1)
+    border 5px solid #aaa
+    
+  span.h4
+    font-weight 300
+    margin-left 10px
+    
+  blockquote
+    padding-top 1px
+    
+  h1, h2
+    text-transform uppercase
+    
+  h2::after
+    content ''
+    display block
+    width 100%
+    height 1px
+    margin-top 5px
+    background #eee
+  
+  span > .fa
+    margin-left 5px
+    
+    &::before
+      display inline-block
+      width 20px
+      text-align center
+  
+  ul
+    list-style-type none
+    padding-left 5px
+          
+    li
+      &::before
+        content: '- '
+        margin-right 10px
+    
+    

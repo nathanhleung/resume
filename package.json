@@ -1,0 +1,17 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "jade": "jade index.jade --out build",
+    "stylus": "stylus styles.styl --out build",
+    "build": "npm run jade && npm run stylus"
+  },
+  "author": "Nathan Leung",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "stylus": "^0.53.0"
+  }
+}
